@@ -62,9 +62,9 @@ files:
 - name: scraper.py
   visible: true
   learner_created: false
-feedback_link: https://hyperskill.org/projects/145/stages/781/implement#comment
+feedback_link: https://hyperskill.org/learn/step/11755#comment
 status: Solved
 feedback:
   message: Congratulations!
   time: "Wed, 08 Feb 2023 02:17:00 UTC"
-record: -1
+record: 1

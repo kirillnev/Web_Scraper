@@ -130,6 +130,6 @@ files:
     if __name__ == '__main__':
         WebScraperTest().run_tests()
   learner_created: false
-feedback_link: https://hyperskill.org/projects/145/stages/784/implement#comment
+feedback_link: https://hyperskill.org/learn/step/11758#comment
 status: Unchecked
 record: -1
