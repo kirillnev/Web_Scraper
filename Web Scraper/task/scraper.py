@@ -12,21 +12,18 @@ CONTENT_KEY = 'content'
 
 
 def main():
-    url_input = input()
+    url_input = input('Input the URL:')
     # url_input = 'https://www.nature.com/articles/d41586-023-00103-3'
     url = urlparse(url_input)
-    if url.netloc == 'www.nature.com' and url.path.split('/')[1] == 'articles':
-        response = requests.get(url_input)
-        if response.status_code == HTTPStatus.OK:
-            soup = BeautifulSoup(response.content, 'html.parser')
-            title = soup.find('title')
-            description = soup.find('meta', {'name': 'description'})
-            result = {'title': title.text, 'description': description.get('content')}
-            print(result)
-        else:
-            print('Invalid page!')
+    response = requests.get(url_input)
+    if response.status_code == HTTPStatus.OK:
+        file = open('source.html', 'wb')
+        page_content = response.content
+        file.write(page_content)
+        file.close()
+        print('Content saved.')
     else:
-        print('Invalid page!')
+        print(f'The URL returned {response.status_code}')
 
 
 if __name__ == '__main__':
